@@ -1,0 +1,57 @@
+#uno
+# import pandas as pd
+#
+# article = pd.read_csv('ListOfIdiots.csv', delimiter=';')      #Подключение таблицы
+# names = ['user_id', 'user_name', 'user_age']             #Список
+# article.to_csv("ListOfIdiots.csv", index=False, sep=";")       #Настройка таблицы
+# print('user_id, user_name, user_age')                     #Вывод строк
+# col = str(input('Enter column'))                          #Спрашиваем у юзера откуда взять инфу
+# num = int(input('Enter number'))
+# def read_slot():
+#     print(article.at[num, col])                      #Создание функции
+# read_slot()                                #Использование функции
+
+#dos
+
+# import matplotlib.pyplot as plt
+# import csv
+#
+# x = []                #Создание списков
+# y = []
+#
+# with open('XLSX.csv', 'r') as datafile:           #Использование ксв таблицу как датасет
+#     plotting = csv.reader(datafile, delimiter=';')
+#
+#     for ROWS in plotting:
+#         x.append(float(ROWS[0]))   #Настройка строк и столбцы
+#         y.append(float(ROWS[1]))
+#
+# plt.figure(figsize=(8,4))             #Уточнение фигуры
+# plt.scatter(x,y, label='line_2')       #Добавление типа графика как скаттер
+# plt.legend()                   #Легенда графика, решил сюда ничего не добавлять
+# plt.grid(linewidth=0.5)        #Ширина сетки (НЕ СЕКТЫ!!!)
+# plt.xticks()
+# plt.yticks()
+# plt.xlabel('X')               #Подписывание ширины и высоты
+# plt.ylabel('Y')
+# plt.show()                  #Открытие таблицы
+
+#tres
+
+# import matplotlib.pyplot as plt
+# import numpy as np
+# from matplotlib import cm
+#
+# plt.style.use('_mpl-gallery')                           #Выбор стиля
+# n_radii = 8                                                         #Создание переменных
+# n_angles = 36
+# radii = np.linspace(0.125, 1.0, n_radii)                                        #Добавление углов и пробелов
+# angles = np.linspace(0, 2*np.pi, n_angles, endpoint=False)[..., np.newaxis]
+# x = np.append(0, (radii*np.cos(angles)).flatten())
+# y = np.append(0, (radii*np.sin(angles)).flatten())                      #Конвертирование координат
+# z = np.sin(-x*y)
+# fig, ax = plt.subplots(subplot_kw={'projection': '3d'})
+# ax.plot_trisurf(x, y, z, vmin=z.min() * 2, cmap=cm.Reds)            #Настройка внешнего вида графика
+# ax.set(xticklabels=[],yticklabels=[],zticklabels=[])
+# plt.show()                                                          #Открытие окна с графика
+# ура чипсы
